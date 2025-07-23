@@ -1,4 +1,4 @@
-const apiKey = '89ffa927c462a3565e4db0da39521ba2'; // Replace with your OpenWeatherMap API Key
+const apiKey = '89ffa927c462a3565e4db0da39521ba2'; // your API key
 
 async function getWeather() {
   const city = document.getElementById("city").value;
@@ -22,3 +22,10 @@ async function getWeather() {
     alert("Error: " + err.message);
   }
 }
+
+// 🔑 Add this to support pressing "Enter"
+document.getElementById("city").addEventListener("keypress", function (e) {
+  if (e.key === "Enter") {
+    getWeather();
+  }
+});
