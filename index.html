@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello from GitHub Actions  123jagvsjgorwgo 🚀</h1>
+  <div class="container">
+    <h1>🌤️ Weather App</h1>
+    <input type="text" id="city" placeholder="Enter city" />
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="result" class="card hidden">
+      <h2 id="location"></h2>
+      <p><span id="temp"></span>°C</p>
+      <p id="desc"></p>
+      <p>Humidity: <span id="humidity"></span>%</p>
+      <p>Wind: <span id="wind"></span> km/h</p>
+    </div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
